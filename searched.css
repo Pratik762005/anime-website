@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+button{
+    height: 40px;
+    width: 120px;
+    padding: 5px 5px;
+    box-shadow: 0 0 10px #11FFC4;
+    border: 1px solid #11FFC4;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 520;
+}
+button:hover{
+    background-color: #11FFC4;
+    color: white;
+}
+#container{
+    width: 85%;
+    min-height: 150px;
+    padding: 20px 5%;
+    margin-top: 50px;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: 300px 300px 300px 300px;
+    
+}
+.anime_container{
+   min-height: 350px;
+   background-color: wheat;
+   margin: 10px;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-direction: column;
+   padding: 20px;
+}
+.anime{
+    width: 200px;
+    height: 250px;
+    background-color: aqua;
+   border-radius: 20px;
+   margin-bottom: 10px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+   
+}
+.anime:hover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.322);
+    border-radius: 15px;
+    z-index: 0;
+    border: white solid 1.5px;
+    cursor: pointer;
+}
+.name{
+    font-size: 20px;
+    font-family: "roboto",sans-serif;
+    text-align: center;
+}
