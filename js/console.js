@@ -123,43 +123,47 @@ function add_event(array){
             data=array[3].data[index];
         }
         sessionStorage.setItem("animeData", JSON.stringify(data));
-        window.location.href = "anime_page.html";
+        window.location.href = "html/anime_page.html";
         })
     });
 }
 
 
 
-document.addEventListener('keydown',(e)=>{
-    
 let input=document.querySelector("#search");
-    if(e.key==="Enter"){
-        if(input.value!==""){
+let searchBtn=document.querySelector("#search_div button");
 
-                    async function search(){
-
-                            try{
-                                let url=`https://api.jikan.moe/v4/anime?q=${input.value}`;
-                                let data=await fetch(url);
-                                let info=await data.json();
-                             
-                                if(info.data.length==0){
-                                    window.location.href="error.html";
-                                }
-                                else{
-                                    sessionStorage.setItem("multipleanimeData", JSON.stringify(info));
-                                    window.location.href="searched.html"
-                                }
-                            }
-                            catch(error){
-                                console.log(error);
-                                window.location.href="error.html";
-                            }
-                    }
-                    search();
+async function executeSearch(){
+    if(input && input.value!==""){
+        try{
+            let url=`https://api.jikan.moe/v4/anime?q=${input.value}`;
+            let data=await fetch(url);
+            let info=await data.json();
+            
+            if(info.data.length==0){
+                window.location.href="html/error.html";
+            }
+            else{
+                sessionStorage.setItem("multipleanimeData", JSON.stringify(info));
+                window.location.href="html/searched.html"
+            }
+        }
+        catch(error){
+            console.log(error);
+            window.location.href="html/error.html";
         }
     }
-})
+}
+
+document.addEventListener('keydown',(e)=>{
+    if(e.key==="Enter"){
+        executeSearch();
+    }
+});
+
+if(searchBtn){
+    searchBtn.addEventListener('click', executeSearch);
+}
 
 
 

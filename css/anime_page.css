@@ -157,6 +157,36 @@ h5{
     background-size: cover;
 }
 
+@media screen and (max-width: 768px) {
+    #main_div {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #image_div {
+        width: 90%;
+        height: 350px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        float: none;
+    }
+    #info_div {
+        width: 90%;
+        height: auto;
+        float: none;
+        padding: 5%;
+        border-radius: 10px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h5 {
+        text-align: center;
+    }
+}
+
 
 
 

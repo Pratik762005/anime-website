@@ -3,7 +3,7 @@ let data = JSON.parse(sessionStorage.getItem("animeData"));
 
 let button=document.querySelector("#button");
 button.addEventListener("click",()=>{
-    window.location.href="index.html";
+    window.location.href="../index.html";
 });
 
 let url=`https://api.jikan.moe/v4/anime/${data.mal_id}/characters`

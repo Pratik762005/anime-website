@@ -29,7 +29,7 @@ let name_of_anime;
 
 let button=document.querySelector("#button");
 button.addEventListener("click",()=>{
-    window.location.href="index.html"
+    window.location.href="../index.html"
 }
 )
 

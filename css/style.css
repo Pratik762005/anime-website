@@ -45,7 +45,7 @@ span{
     width: 70%;
     height: 500px;
     background-color: aqua;
-    background-image: url("image1.jpg");
+    background-image: url("../images/image1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -234,4 +234,78 @@ footer>p>span{
 }
 #social_media>div i:hover{
     color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #nav h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+    #nav {
+        height: 100px;
+    }
+    #upper_div {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #left_side {
+        width: 90%;
+        padding: 5%;
+        text-align: center;
+        padding-top: 10%;
+    }
+    #right_side {
+        width: 90%;
+        padding: 5%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #search_div {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #search_div input {
+        width: calc(100% - 60px);
+    }
+    .recomendation {
+        width: 95%;
+        height: auto;
+    }
+    .recomendation h4 {
+        margin-left: 10px;
+        text-align: center;
+    }
+    hr {
+        width: 95%;
+    }
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    footer>p {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+    footer>p>span {
+        font-size: 15px;
+    }
+    #social_media {
+        margin-right: 0;
+    }
 }

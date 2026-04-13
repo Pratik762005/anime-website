@@ -6,7 +6,7 @@
 body{
     height: 100vh;
     width: 100%;
-    background-image: url("error\ image.png");
+    background-image: url("../images/error image.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,4 +66,18 @@ button:hover{
 a{
     text-decoration: none;
     color: black;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 100px;
+    }
+    h2 {
+        font-size: 24px;
+        text-align: center;
+        padding: 0 10px;
+    }
+    #social_media {
+        flex-wrap: wrap;
+    }
 }
